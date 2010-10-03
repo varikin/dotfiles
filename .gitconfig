@@ -1,0 +1,12 @@
+[user]
+    name = John Shimek
+    email = varikin@gmail.com
+
+[diff]
+    color = auto
+
+[pager]
+    color = true
+
+[status]
+    color = auto
