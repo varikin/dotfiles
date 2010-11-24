@@ -21,3 +21,5 @@ code/
 .subversion/
 .viminfo
 .zshhistory
+.zcompdump
+.gdb_history
