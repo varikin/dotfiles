@@ -23,3 +23,5 @@ code/
 .zshhistory
 .zcompdump
 .gdb_history
+*.swp
+*eclipse*

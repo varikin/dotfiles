@@ -25,9 +25,6 @@ export TERM EDITOR PAGER RSYNC_RSH CVSROOT FIGNORE DISPLAY LS_COLORS NNTPSERVER 
 export WORKON_HOME=$HOME/code/venvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-#Silver Lining
-alias silver=/Users/varikin/code/venvs/silver/bin/silver
-
 #Postgres
 alias pg_ctl='pg_ctl -D /usr/local/var/postgres -l /usr/local/log/postgres.log'
 
@@ -111,7 +108,6 @@ fi
 
 hosts=(
 	"$_etc_hosts[@]"
-
 	localhost
 	#Add favourite hosts here, and zsh will autocomplete them
 )
@@ -119,8 +115,7 @@ hosts=(
 zstyle ':completion:*' hosts $hosts
 
 my_accounts=(
-	root@localhost
-	#Add ssh hosts here, and zsh will autocomplete them
+        varikin@web41.webfaction.com
 )
 
 zstyle ':completion:*:my-accounts' users-hosts $my_accounts
@@ -146,15 +141,9 @@ setopt \
 ## Command Aliases
 alias ls='ls -G'
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
-alias web41="ssh varikin@web41.webfaction.com"
 alias x=exit
 alias c=clear
-#alias s=screen
-#alias r='screen -R'
 alias vi='vim'
-#alias ls='ls --color=auto -F'
-#alias l='ls -lAF --color=auto'
-alias sls='screen -ls'
 alias zrc='vim ~/.zshrc'
 alias e='smartextract'
 alias o='open'
