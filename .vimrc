@@ -1,11 +1,28 @@
 set nocompatible
-set ruler
-set wildmenu
-set autoindent
-set smartindent
-set softtabstop=4
-set expandtab
-set shiftwidth=4
-syntax on
 
+" Pathogen setup
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+filetype plugin indent on
+
+" Appearance
+syntax on
+set ruler
+
+" Searching
+set hlsearch
+set incsearch
+set smartcase
+
+
+" Editing behavior
+set backspace=indent,eol
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smartindent
+set expandtab
+
+let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
+set wildmenu
 let NERDTreeIgnore=['\.pyc$', '\~$']

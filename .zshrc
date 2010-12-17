@@ -138,6 +138,11 @@ setopt \
 # Shell Aliases
 # -----------------------------------------------
 
+# Use MacVim if possible
+if [[ -f /Applications/MacVim.app/Contents/MacOS/Vim ]]; then
+    alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+fi
+
 ## Command Aliases
 alias ls='ls -G'
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
