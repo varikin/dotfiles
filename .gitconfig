@@ -10,3 +10,7 @@
 
 [status]
     color = auto
+
+[github]
+    user = varikin
+    token = $
