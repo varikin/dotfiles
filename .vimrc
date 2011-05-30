@@ -9,3 +9,5 @@ set shiftwidth=4
 syntax on
 
 let NERDTreeIgnore=['\.pyc$', '\~$']
+set background=dark
+colorscheme solarized

@@ -11,6 +11,8 @@
 [status]
     color = auto
 
-[github]
-    user = varikin
-    token = $
+[difftool "kal"]
+    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+    prompt = false

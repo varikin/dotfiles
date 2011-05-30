@@ -22,22 +22,17 @@ SAVEHIST=3000
 export TERM EDITOR PAGER RSYNC_RSH CVSROOT FIGNORE DISPLAY LS_COLORS NNTPSERVER COLORTERM PATH HISTFILE HISTSIZE SAVEHIST
 
 # Virtualevn setup
-export WORKON_HOME=$HOME/code/venvs
+export WORKON_HOME=$HOME/.venvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 #Postgres
 alias pg_ctl='pg_ctl -D /usr/local/var/postgres -l /usr/local/log/postgres.log'
 
-
 # -----------------------------------------------
-# Set up the prompt
+# Load custom zsh functions
 # -----------------------------------------------
-
-# root prompt
-[ $UID = 0 ] && export PROMPT=$'%{\e[0;31m%}[%{\e[0m%}%n%{\e[0;31m%}@%{\e[0m%}hostname%{\e[0;31m%}:%{\e[0m%}%~%{\e[0;31m%}]%{\e[0m%}%# '
-# normal user prompt
-[ $UID != 0 ] && export PROMPT=$'%{\e[0;36m%}[%{\e[0m%}%n%{\e[0;36m%}@%{\e[0m%}hostname%{\e[0;36m%}:%{\e[0m%}%~%{\e[0;36m%}]%{\e[0m%}%# '
-#export RPROMPT=$"%{\e[0;33m%}[%T]%{\e[0m%}"
+fpath=($fpath $HOME/.zsh/func)
+typeset -U fpath
 
 # -----------------------------------------------
 # Load zsh modules
@@ -47,6 +42,15 @@ alias pg_ctl='pg_ctl -D /usr/local/var/postgres -l /usr/local/log/postgres.log'
 autoload -U compinit && compinit 
 # zmv is a batch file rename tool; e.g. zmv '(*).text' '$1.txt'
 autoload zmv
+# prompt themes
+autoload -U promptinit
+
+# -----------------------------------------------
+# Set the prompt theme
+# -----------------------------------------------
+setopt PROMPT_SUBST 
+promptinit
+prompt adam2
 
 # -----------------------------------------------
 # Set up zsh autocompletions
@@ -194,9 +198,6 @@ smartextract () {
     fi
 }
 
-autoload -U promptinit
-promptinit
-prompt adam2
 
 export CLICOLOR=1
 export LSCOLORS=CxFxExDxBxegedabagacad
