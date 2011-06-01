@@ -118,12 +118,6 @@ hosts=(
 
 zstyle ':completion:*' hosts $hosts
 
-my_accounts=(
-        varikin@web41.webfaction.com
-)
-
-zstyle ':completion:*:my-accounts' users-hosts $my_accounts
-
 # -----------------------------------------------
 # Set zsh options
 # -----------------------------------------------
@@ -179,6 +173,22 @@ alias -g A="|awk '{print $1}'"
 # -----------------------------------------------
 #  User-defined Functions
 # -----------------------------------------------
+
+goto () {
+    if [[ $# == 0 ]]; then
+        print usage: goto dir
+        return
+    fi
+
+    if [ -d ~/code/$1 ]; then
+        cd ~/code/$1
+        if [ -f env ]; then
+            source env
+        fi
+    else
+        print \'$1\' doesn\'t exist
+    fi
+}
 
 # Usage: smartextract <file>
 # Description: extracts archived files / mounts disk images
