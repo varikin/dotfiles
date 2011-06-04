@@ -7,6 +7,7 @@ IGNORE = (
     os.path.basename(__file__),
     '.git',
     '.gitignore',
+    'README',
 )
 
 if __name__ == "__main__":

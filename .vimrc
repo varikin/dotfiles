@@ -5,11 +5,13 @@ filetype plugin indent on
 " Appearance
 syntax on
 set ruler
+set nu
 
 " Searching
 set hlsearch
 set incsearch
 set smartcase
+set showmatch
 
 
 " Editing behavior
@@ -19,9 +21,11 @@ set softtabstop=4
 set shiftwidth=4
 set smartindent
 set expandtab
+set nobackup
 
-let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 set wildmenu
 let NERDTreeIgnore=['\.pyc$', '\~$']
 set background=dark
-colorscheme solarized
+
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
