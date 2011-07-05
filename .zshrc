@@ -9,6 +9,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Virtualenv
+export WORKON_HOME=$HOME/.venvs
+source /usr/local/bin/virtualenvwrapper.sh
+
 ## Command Aliases
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
 alias x=exit
@@ -31,4 +35,9 @@ goto () {
     else
         print \'$1\' doesn\'t exist
     fi
+}
+
+source `brew --prefix`/etc/profile.d/z.sh
+function precmd () {
+    z --add "$(pwd -P)"
 }
