@@ -29,6 +29,9 @@ goto () {
 
     if [ -d ~/code/$1 ]; then
         cd ~/code/$1
+        if [ -d $WORKON_HOME/$1 ]; then
+            workon $1
+        fi
         if [ -f env ]; then
             source env
         fi
