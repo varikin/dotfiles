@@ -10,7 +10,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Virtualenv
-export WORKON_HOME=$HOME/.venvs
+export WORKON_HOME=$HOME/.venvs 
 source /usr/local/bin/virtualenvwrapper.sh
 
 ## Command Aliases
