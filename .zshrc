@@ -36,8 +36,3 @@ goto () {
         print \'$1\' doesn\'t exist
     fi
 }
-
-source `brew --prefix`/etc/profile.d/z.sh
-function precmd () {
-    z --add "$(pwd -P)"
-}
