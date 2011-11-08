@@ -15,11 +15,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 ## Command Aliases
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
-alias x=exit
-alias c=clear
 alias zrc='vim ~/.zshrc'
-alias e='smartextract'
-alias o='open'
 
 goto () {
     if [[ $# == 0 ]]; then
