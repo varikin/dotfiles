@@ -13,6 +13,9 @@ source $ZSH/oh-my-zsh.sh
 export WORKON_HOME=$HOME/.venvs 
 source /usr/local/bin/virtualenvwrapper.sh
 
+# RVM
+[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm 
+
 ## Command Aliases
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
 alias zrc='vim ~/.zshrc'

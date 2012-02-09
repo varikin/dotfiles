@@ -7,3 +7,4 @@ export LANG=en_US.UTF-8
 # Getting rid of the impossible blue!
 export LSCOLORS=fxfxcxdxbxhghdabagacad
 
+
