@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 export ZSH_THEME="cloud"
 
-plugins=(git svn osx pip brew textmate)
+plugins=(git svn osx pip brew textmate ruby rvm rails3)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,7 +14,7 @@ export WORKON_HOME=$HOME/.venvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # RVM
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm 
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm 
 
 ## Command Aliases
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
