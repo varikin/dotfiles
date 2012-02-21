@@ -10,8 +10,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Virtualenv
-export WORKON_HOME=$HOME/.venvs 
-source /usr/local/bin/virtualenvwrapper.sh
+[[ -d $HOME/.venvs ]] && export WORKON_HOME=$HOME/.venvs 
+[[ -s /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
 
 # RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm 
