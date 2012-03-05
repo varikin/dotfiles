@@ -4,7 +4,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="cloud"
-plugins=(git svn osx pip brew textmate ruby rvm rails3)
+plugins=(git svn osx pip brew textmate rvm ruby rails3 gem rake django)
 source $ZSH/oh-my-zsh.sh
 
 # Virtualenv
