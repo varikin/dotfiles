@@ -1,5 +1,11 @@
 set nocompatible
 
+
+" Setup pathogen
+" Put plugins in ~/.vim/bundle/
+call pathogen#infect()
+call pathogen#helptags()
+
 filetype plugin indent on
 
 " Appearance
