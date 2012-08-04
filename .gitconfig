@@ -18,3 +18,5 @@
     g = log --graph --all --pretty=format:'%Cgreen[%h]%Creset %C(yellow)%d%Creset %Cblue%ad by %an%Creset: %s' --date=local
 [core]
 	excludesfile = /Users/jshimek/.gitignore_global
+[push]
+	default = upstream
