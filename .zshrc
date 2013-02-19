@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/python:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/usr/local/go/bin:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
@@ -20,6 +20,15 @@ alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
 alias zrc='vim ~/.zshrc'
 alias hosts='sudo vim /etc/hosts'
 
+alias sassy='cd ~/code/core/web;sass --update base/console/sass:base/console/'
+
+#Z
+. `brew --prefix`/etc/profile.d/z.sh
+
+# Disable the god damn auto correct. Yes, I did mean core, not code!
+unsetopt correct_all
+
+# Red STDERR
 sm_color_red="$(  tput setaf 1)"
 sm_color_reset="$(tput sgr0   )"
 exec 2>>( awk '{print "'"$sm_color_red"'"$0"'"$sm_color_reset"'"}' >&2 & )
