@@ -1,10 +1,16 @@
 set nocompatible
 
 
-" Setup pathogen
-" Put plugins in ~/.vim/bundle/
-call pathogen#infect()
-call pathogen#helptags()
+" Setup Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" My bundles (vundle is requried)
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'ervandew/supertab'
+
 
 filetype plugin indent on
 
@@ -16,6 +22,7 @@ set nu
 " Searching
 set hlsearch
 set incsearch
+set ignorecase
 set smartcase
 set showmatch
 
@@ -30,7 +37,6 @@ set expandtab
 set nobackup
 
 set wildmenu
-let NERDTreeIgnore=['\.pyc$', '\~$']
 set background=dark
 
 
