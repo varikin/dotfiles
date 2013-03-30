@@ -22,7 +22,7 @@ alias hosts='sudo vim /etc/hosts'
 
 alias sassy='cd ~/code/core/web;sass --update base/console/sass:base/console/'
 
-#Z
+# Z
 . `brew --prefix`/etc/profile.d/z.sh
 
 # Disable the god damn auto correct. Yes, I did mean core, not code!
