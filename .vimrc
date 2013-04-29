@@ -12,6 +12,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ervandew/supertab'
 " Powerline is sweet looking!
 Bundle 'Lokaltog/powerline'
+" Super awesome syntax & error highlighter
+Bundle 'Syntastic'
 
 filetype plugin indent on       " Load file type plugins & indentation
 syntax on                       " Because I value sanity

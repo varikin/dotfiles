@@ -3,7 +3,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/usr/local/go
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_THEME="cloud"
+export ZSH_THEME="miloshadzic"
 plugins=(git osx pip brew rvm ruby rails3 gem rake django)
 source $ZSH/oh-my-zsh.sh
 
@@ -29,9 +29,9 @@ alias sassy='cd ~/code/core/web;sass --update base/console/sass:base/console/'
 unsetopt correct_all
 
 # Red STDERR
-sm_color_red="$(  tput setaf 1)"
-sm_color_reset="$(tput sgr0   )"
-exec 2>>( awk '{print "'"$sm_color_red"'"$0"'"$sm_color_reset"'"}' >&2 & )
+#sm_color_red="$(  tput setaf 1)"
+#sm_color_reset="$(tput sgr0   )"
+#exec 2>>( awk '{print "'"$sm_color_red"'"$0"'"$sm_color_reset"'"}' >&2 & )
 
 # Move word via alt-< and alt->
 bindkey "^[^[[D" backward-word
