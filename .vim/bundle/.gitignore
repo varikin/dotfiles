@@ -2,7 +2,7 @@
 *
 
 # Except for vundle
-!vundle
+!vundle/*
 
 # And this file
 !.gitignore
