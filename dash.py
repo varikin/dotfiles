@@ -17,8 +17,9 @@ if __name__ == "__main__":
     for file in files:
         if file in IGNORE:
             continue
-
-        dotfile = os.path.join(home, file)
+	
+        name = '.' + file	
+        dotfile = os.path.join(home, name)
         if not os.path.exists(dotfile):
             file = os.path.abspath(file)            
             os.symlink(file, dotfile)
