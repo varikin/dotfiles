@@ -17,7 +17,13 @@
 [alias]
     g = log --graph --pretty=format:'%Cgreen[%h]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
     l = log --pretty=format:'%Cgreen[%H]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
-	track = "!f() { ([ $# -eq 2 ] && ( echo \"Setting tracking for branch \" $1 \" -> \" $2;git branch --set-upstream $1 $2; ) || ( git for-each-ref --format=\"local: %(refname:short) <--sync--> remote: %(upstream:short)\" refs/heads && echo --Remotes && git remote -v)); }; f"
+
+    # Show which branch is tracking what 
+    track = "!f() { ([ $# -eq 2 ] && ( echo \"Setting tracking for branch \" $1 \" -> \" $2;git branch --set-upstream $1 $2; ) || ( git for-each-ref --format=\"local: %(refname:short) <--sync--> remote: %(upstream:short)\" refs/heads && echo --Remotes && git remote -v)); }; f"
+
+    # Show missing commits from a branch
+    missing = "!f() { git log --oneline `git rev-parse --abbrev-ref HEAD`..$1; }; f"
+
 [core]
 	excludesfile = /Users/jshimek/.gitignore_global
 	editor = /usr/local/bin/vim
