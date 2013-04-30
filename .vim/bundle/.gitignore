@@ -1,0 +1,8 @@
+# Ignore all bundles (vundle is handling that for me)
+*
+
+# Except for vundle
+!vundle
+
+# And this file
+!.gitignore
