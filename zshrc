@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/usr/local/go/bin:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/python:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
