@@ -14,6 +14,9 @@ Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/powerline'
 " Super awesome syntax & error highlighter
 Bundle 'Syntastic'
+" Go!
+Bundle 'nsf/gocode', {'rtp': 'vim/'}
+Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on       " Load file type plugins & indentation
 syntax on                       " Because I value sanity
