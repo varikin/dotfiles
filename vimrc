@@ -17,6 +17,8 @@ Bundle 'Syntastic'
 " Go!
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'jnwhiteh/vim-golang'
+"Notes!
+Bundle 'xolox/vim-notes'
 
 filetype plugin indent on       " Load file type plugins & indentation
 syntax on                       " Because I value sanity
@@ -50,5 +52,8 @@ noremap! jj <Esc>
 set laststatus=2                " Ensure room for powerline!
 set noshowmode                  " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+" Notes!
+:let g:notes_directory = '~/Documents/Notes'
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
