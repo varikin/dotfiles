@@ -4,15 +4,13 @@
 
 [diff]
     color = auto
+	tool = Kaleidoscope
 
 [pager]
     color = true
 
 [status]
     color = auto
-
-[difftool]
-    prompt = false
 
 [alias]
     g = log --graph --pretty=format:'%Cgreen[%h]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
@@ -31,3 +29,5 @@
 	default = upstream
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
