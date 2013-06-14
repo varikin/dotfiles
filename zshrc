@@ -33,3 +33,4 @@ bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 
 export EDITOR=/usr/local/bin/vim
+export ANT_OPTS="-Xmx1g"
