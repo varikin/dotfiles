@@ -1,22 +1,28 @@
 # Path
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/python:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-# Path to your oh-my-zsh configuration.
+export EDITOR=/usr/local/bin/vim
+
+# Oh-My-Zsh config
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="miloshadzic"
-plugins=(ant colorize extract git osx pip brew rvm ruby gem django history-substring-search)
+plugins=(ant extract gitfast pip brew rvm gem django history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
-# Virtualenv
-[[ -d $HOME/.venvs ]] && export WORKON_HOME=$HOME/.venvs 
-[[ -s /usr/local/share/python/virtualenvwrapper.sh ]] && source /usr/local/share/python/virtualenvwrapper.sh
+# Python
+_VENVW="/usr/local/share/python/virtualenvwrapper.sh"
+_VENVS="$HOME/.venvs"
+[[ -d $_VENVS ]] && [[ -s $_VENVW ]] && export WORKON_HOME=$_VENVS && source $_VENVW
+alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
 
-# RVM
+# Ruby
 _RVM=$HOME/.rvm/scripts/rvm
 [[ -s $_RVM ]] && source $_RVM
 
+# Java
+export ANT_OPTS="-Xmx1g"
+
 # Command Aliases
-alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
 alias zrc='vim ~/.zshrc'
 alias hosts='sudo vim /etc/hosts'
 
@@ -32,5 +38,3 @@ unsetopt correct_all
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 
-export EDITOR=/usr/local/bin/vim
-export ANT_OPTS="-Xmx1g"
