@@ -45,15 +45,22 @@ set expandtab                   " Spaces, not tabs
 set wildmenu                    " Never really figured this out
 set background=dark             " Darkness descend upon the world
 
-" <Esc> to jj This is fucking crazy (:
-noremap! jj <Esc>
 
 " Powerline!
 set laststatus=2                " Ensure room for powerline!
 set noshowmode                  " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" Fix delay escaping Insert Mode with Powerline
+"augroup FastEscape
+    "autocmd!
+    "au InsertEnter * set timeoutlen=0
+    "au InsertLeave * set timeoutlen=1000
+"augroup END
 
 " Notes!
 :let g:notes_directory = '~/Documents/Notes'
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+" <Esc> to jj This is fucking crazy (:
+inoremap jj <Esc>

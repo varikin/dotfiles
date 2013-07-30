@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Python
 _VENVW="/usr/local/share/python/virtualenvwrapper.sh"
-_VENVS="$HOME/.venvs"
+_VENVS="$HOME/.virtualenvs"
 [[ -d $_VENVS ]] && [[ -s $_VENVW ]] && export WORKON_HOME=$_VENVS && source $_VENVW
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
 

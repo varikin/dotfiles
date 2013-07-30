@@ -26,7 +26,7 @@
 	excludesfile = /Users/jshimek/.gitignore_global
 	editor = /usr/local/bin/vim
 [push]
-	default = upstream
+	default = current
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
