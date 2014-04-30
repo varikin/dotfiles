@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/share/python:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/sbin:/usr/local/bin:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:$HOME/.adt/sdk/tools:/$HOME/.adt/sdk/platform-tools
 
 export EDITOR=/usr/local/bin/vim
 
@@ -9,8 +9,12 @@ export ZSH_THEME="miloshadzic"
 plugins=(ant extract gitfast pip brew rvm gem django history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
+# Git
+alias gcd="git checkout develop"
+alias gl="git pull -p"
+
 # Python
-_VENVW="/usr/local/share/python/virtualenvwrapper.sh"
+_VENVW="/usr/local/bin/virtualenvwrapper.sh"
 _VENVS="$HOME/.virtualenvs"
 [[ -d $_VENVS ]] && [[ -s $_VENVW ]] && export WORKON_HOME=$_VENVS && source $_VENVW
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
@@ -25,8 +29,6 @@ export ANT_OPTS="-Xmx1g"
 # Command Aliases
 alias zrc='vim ~/.zshrc'
 alias hosts='sudo vim /etc/hosts'
-
-alias sassy='cd ~/code/core/web;sass --update base/console/sass:base/console/'
 
 # Z
 . `brew --prefix`/etc/profile.d/z.sh

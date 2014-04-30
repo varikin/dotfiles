@@ -23,6 +23,8 @@ Bundle 'xolox/vim-notes'
 Bundle 'scrooloose/nerdtree'
 " MiniBufExplorer
 Bundle 'fholgado/minibufexpl.vim'
+" Markdown
+Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on       " Load file type plugins & indentation
 syntax on                       " Because I value sanity
