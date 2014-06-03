@@ -1,12 +1,12 @@
 # Path
-export PATH=/usr/local/sbin:/usr/local/bin:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:$HOME/.adt/sdk/tools:/$HOME/.adt/sdk/platform-tools
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:$HOME/.adt/sdk/tools:/$HOME/.adt/sdk/platform-tools
 
 export EDITOR=/usr/local/bin/vim
 
 # Oh-My-Zsh config
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="miloshadzic"
-plugins=(ant extract gitfast pip brew rvm gem django history-substring-search)
+plugins=(ant extract gitfast pip brew gem django history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Git
@@ -18,10 +18,6 @@ _VENVW="/usr/local/bin/virtualenvwrapper.sh"
 _VENVS="$HOME/.virtualenvs"
 [[ -d $_VENVS ]] && [[ -s $_VENVW ]] && export WORKON_HOME=$_VENVS && source $_VENVW
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
-
-# Ruby
-_RVM=$HOME/.rvm/scripts/rvm
-[[ -s $_RVM ]] && source $_RVM
 
 # Java
 export ANT_OPTS="-Xmx1g"
