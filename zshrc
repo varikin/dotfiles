@@ -6,7 +6,7 @@ export EDITOR=/usr/local/bin/vim
 # Oh-My-Zsh config
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="miloshadzic"
-plugins=(ant extract gitfast pip brew gem django history-substring-search)
+plugins=(ant brew bundler django extract gem gitfast pip rvm history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Git
