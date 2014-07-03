@@ -25,6 +25,15 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'fholgado/minibufexpl.vim'
 " Markdown
 Bundle 'tpope/vim-markdown'
+" Cucumber
+Bundle 'tpope/vim-cucumber'
+" Surround stuff
+Bundle 'tpope/vim-surround'
+" Added block enders
+Bundle 'tpope/vim-endwise'
+" Comment toggler
+Bundle 'vim-scripts/tcomment'
+
 
 filetype plugin indent on       " Load file type plugins & indentation
 syntax on                       " Because I value sanity
