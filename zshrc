@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:$HOME/.adt/sdk/tools:/$HOME/.adt/sdk/platform-tools
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:$HOME/.adt/sdk/tools:/$HOME/.adt/sdk/platform-tools
 
 export EDITOR=/usr/local/bin/vim
 
@@ -19,6 +19,10 @@ _VENVS="$HOME/.virtualenvs"
 [[ -d $_VENVS ]] && [[ -s $_VENVW ]] && export WORKON_HOME=$_VENVS && source $_VENVW
 alias pyc="find . -name '*.pyc' -print0 | xargs -0 rm"
 
+# Ruby
+_RVM="$HOME/.rvm"
+[[ -d $_RVM ]] && export PATH=$PATH:$_RVM/bin
+
 # Java
 export ANT_OPTS="-Xmx1g"
 
@@ -35,4 +39,5 @@ unsetopt correct_all
 # Move word via alt-< and alt->
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
+
 
