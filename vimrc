@@ -1,39 +1,24 @@
 set nocompatible
 
 " My bundles (vundle is requried)
-" Vundle doesn't like comments after the bundle?!
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-" Awesome git stuff
-Bundle 'tpope/vim-fugitive'
-" Super sweet TextMate tab-completion
-Bundle 'ervandew/supertab'
-" Powerline is sweet looking!
-Bundle 'Lokaltog/powerline'
-" Super awesome syntax & error highlighter
-Bundle 'Syntastic'
-" Go!
-Bundle 'nsf/gocode', {'rtp': 'vim/'}
-Bundle 'jnwhiteh/vim-golang'
-"Notes!
-Bundle 'xolox/vim-notes'
-" NerdTree
-Bundle 'scrooloose/nerdtree'
-" MiniBufExplorer
-Bundle 'fholgado/minibufexpl.vim'
-" Markdown
-Bundle 'tpope/vim-markdown'
-" Cucumber
-Bundle 'tpope/vim-cucumber'
-" Surround stuff
-Bundle 'tpope/vim-surround'
-" Added block enders
-Bundle 'tpope/vim-endwise'
-" Comment toggler
-Bundle 'vim-scripts/tcomment'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'              " Bootstrap Vundle
+Plugin 'tpope/vim-fugitive'             " Awesome git stuff
+Plugin 'ervandew/supertab'              " Super sweet TextMate tab-completion
+Plugin 'Lokaltog/powerline'             " Powerline is sweet looking!
+Plugin 'Syntastic'                      " Super awesome syntax & error highlighter
+Plugin 'nsf/gocode', {'rtp': 'vim/'}    " Go!
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'fholgado/minibufexpl.vim'       " MiniBufExplorer
+Plugin 'tpope/vim-markdown'             " Markdown
+Plugin 'tpope/vim-endwise'              " Added block enders
+Plugin 'kien/ctrlp.vim'                 " Fuzzy find
+Plugin 'kchmck/vim-coffee-script'       " Coffeescript
+
+call vundle#end()        
 
 filetype plugin indent on       " Load file type plugins & indentation
 syntax on                       " Because I value sanity
@@ -65,9 +50,6 @@ set laststatus=2                " Ensure room for powerline!
 set noshowmode                  " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-" Notes!
-:let g:notes_directory = '~/Documents/Notes'
-
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 " Mappings
@@ -75,9 +57,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 " Close buffer
 map <leader>w :bd<cr>
-
-" Toggle NERDTree
-map <leader>d :NERDTreeToggle<cr>
 
 " Switch windows
 map <leader>t <C-w>w
