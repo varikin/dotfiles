@@ -8,14 +8,13 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'              " Bootstrap Vundle
 Plugin 'tpope/vim-fugitive'             " Awesome git stuff
 Plugin 'ervandew/supertab'              " Super sweet TextMate tab-completion
-Plugin 'Lokaltog/powerline'             " Powerline is sweet looking!
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Powerline is sweet looking!
 Plugin 'Syntastic'                      " Super awesome syntax & error highlighter
 Plugin 'nsf/gocode', {'rtp': 'vim/'}    " Go!
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'fholgado/minibufexpl.vim'       " MiniBufExplorer
 Plugin 'tpope/vim-markdown'             " Markdown
 Plugin 'tpope/vim-endwise'              " Added block enders
-Plugin 'kien/ctrlp.vim'                 " Fuzzy find
 Plugin 'kchmck/vim-coffee-script'       " Coffeescript
 
 call vundle#end()        
@@ -48,7 +47,6 @@ set background=dark             " Darkness descend upon the world
 " Powerline!
 set laststatus=2                " Ensure room for powerline!
 set noshowmode                  " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
