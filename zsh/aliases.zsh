@@ -1,0 +1,16 @@
+alias cello='say -v cellos "di di di di di di di di di di di di di di di di di di di di di di di di di di"'
+
+alias ll='ls -la'
+
+alias ga='git add'
+alias gap='git add -p'
+alias gp='git push'
+alias gl='git log'
+alias gst='git status'
+alias gd='git diff'
+alias gb='git branch'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gpu='git pull -p'
+alias gm='git commit'
+alias gcd='git checkout develop'
