@@ -1,6 +1,6 @@
 set nocompatible
 
-" My bundles (vundle is requried)
+" My bundles (vundle is required)
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
