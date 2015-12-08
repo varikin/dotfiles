@@ -49,6 +49,8 @@ set laststatus=2                " Ensure room for powerline!
 set noshowmode                  " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd BufNewFile,BufRead *.message set filetype=proto
+autocmd BufNewFile,BufRead *.structure set filetype=proto
 
 " Mappings
 :let mapleader = ','
