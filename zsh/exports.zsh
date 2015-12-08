@@ -13,7 +13,7 @@ export GREP_COLOR='3;33'
 
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
-export EDITOR='/usr/local/bin/vim'
+export EDITOR='vim'
 
 # Virtual Environment Stuff
 export WORKON_HOME=$HOME/.virtualenvs
