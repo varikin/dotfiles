@@ -18,3 +18,6 @@ export EDITOR='vim'
 # Virtual Environment Stuff
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+export NVM_DIR=$HOME/.nvm
+. $(brew --prefix nvm)/nvm.sh
