@@ -16,8 +16,14 @@ export PAGER='less'
 export EDITOR='vim'
 
 # Virtual Environment Stuff
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+fi 
 
-export NVM_DIR=$HOME/.nvm
-. $(brew --prefix nvm)/nvm.sh
+if [[ -f $(brew --prefix nvm)/nvm.sh ]]; then
+    export NVM_DIR=$HOME/.nvm
+    source $(brew --prefix nvm)/nvm.sh
+fi
+
+export GROOVY_HOME=/usr/local/opt/groovy/libexec

@@ -6,7 +6,7 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/history.zsh
-source ~/.zsh/history/zsh-history-substring-search.zsh
+#source ~/.zsh/history/zsh-history-substring-search.zsh
 
 
 # Todo

@@ -5,17 +5,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'              " Bootstrap Vundle
+Plugin 'VundleVim/Vundle.vim'              " Bootstrap Vundle
 Plugin 'tpope/vim-fugitive'             " Awesome git stuff
 Plugin 'ervandew/supertab'              " Super sweet TextMate tab-completion
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Powerline is sweet looking!
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'Syntastic'                      " Super awesome syntax & error highlighter
 Plugin 'nsf/gocode', {'rtp': 'vim/'}    " Go!
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'fholgado/minibufexpl.vim'       " MiniBufExplorer
 Plugin 'tpope/vim-markdown'             " Markdown
 Plugin 'tpope/vim-endwise'              " Added block enders
-Plugin 'kchmck/vim-coffee-script'       " Coffeescript
 
 call vundle#end()        
 
@@ -44,7 +45,8 @@ set expandtab                   " Spaces, not tabs
 set wildmenu                    " Never really figured this out
 set background=dark             " Darkness descend upon the world
 
-" Powerline!
+" Airline!
+let g:airline_theme='papercolor'
 set laststatus=2                " Ensure room for powerline!
 set noshowmode                  " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
