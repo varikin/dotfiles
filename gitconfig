@@ -1,6 +1,6 @@
 [user]
 	name = John Shimek
-	email = jshimek@code42.com
+	email = john.shimek@target.com
 
 [diff]
     color = auto
@@ -37,6 +37,3 @@
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
