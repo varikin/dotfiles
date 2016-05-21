@@ -1,4 +1,4 @@
-alias cello='say -v cellos "di di di di di di di di di di di di di di di di di di di di di di di di di di"'
+alias cello='say -v cellos "dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum dum"'
 
 alias ll='ls -la'
 
@@ -13,5 +13,9 @@ alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gpu='git pull -p'
 alias gm='git commit'
-alias gcd='git checkout develop'
+
+# This worked when using Jira. Not using jira anymore...
 alias jbr='python ~/Dropbox/jira_to_branch.py'
+
+# Docker for Mac!
+alias de='eval $(docker-machine env)'

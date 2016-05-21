@@ -3,8 +3,8 @@ function virtualenv_info {
 }
 
 function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '±' && return
-    echo '○'
+    git branch >/dev/null 2>/dev/null && echo '👾 ' && return
+    echo '🚀 '
 }
 
 function parse_git_branch() {
@@ -48,7 +48,12 @@ function current_pwd {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-autoload -U colors && colors # Enable colors in prompt
+# Enable colors in prompt
+autoload -U colors && colors
 
 PROMPT='${PR_BOLD_CYAN}$(current_pwd)%{$reset_color%}$(git_prompt_string)%{$reset_color%} $(prompt_char) '
-export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
+
+# Auto-correct prompt, disabled
+#export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
+unsetopt correct
+unsetopt correct_all
