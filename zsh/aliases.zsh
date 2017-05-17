@@ -13,9 +13,7 @@ alias gco='git checkout'
 alias gcm='git checkout master'
 alias gpu='git pull -p'
 alias gm='git commit'
-
-# This worked when using Jira. Not using jira anymore...
-alias jbr='python ~/Dropbox/jira_to_branch.py'
+alias grup='git rebase upstream/master'
 
 # Docker for Mac!
 alias de='eval $(docker-machine env)'
