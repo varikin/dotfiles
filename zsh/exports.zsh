@@ -19,7 +19,7 @@ export EDITOR='vim'
 if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
     export WORKON_HOME=$HOME/.virtualenvs
     source /usr/local/bin/virtualenvwrapper.sh
-fi 
+fi
 
 if [[ -f $(brew --prefix nvm)/nvm.sh ]]; then
     export NVM_DIR=$HOME/.nvm
@@ -27,3 +27,5 @@ if [[ -f $(brew --prefix nvm)/nvm.sh ]]; then
 fi
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+export GOPATH=$HOME/code/go
