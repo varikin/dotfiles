@@ -13,7 +13,9 @@ alias gco='git checkout'
 alias gcm='git checkout master'
 alias gpu='git pull -p'
 alias gm='git commit'
-alias grup='git rebase upstream/master'
+alias grum='git pull --rebase upstream master'
+alias grom='git pull --rebase origin master'
+alias kk='kubectl'
 
 # Docker for Mac!
 alias de='eval $(docker-machine env)'

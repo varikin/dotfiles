@@ -18,7 +18,7 @@ Plugin 'fholgado/minibufexpl.vim'       " MiniBufExplorer
 Plugin 'tpope/vim-markdown'             " Markdown
 Plugin 'tpope/vim-endwise'              " Added block enders
 
-call vundle#end()        
+call vundle#end()
 
 filetype plugin indent on       " Load file type plugins & indentation
 syntax on                       " Because I value sanity

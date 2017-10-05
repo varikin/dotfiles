@@ -1,6 +1,8 @@
+export GOPATH=$HOME/code/go
+
 # Currently this path is appended to dynamically when picking a ruby version
 # zshenv has already started PATH with rbenv so append only here
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/local/share/npm/bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/local/share/npm/bin:$GOPATH/bin
 
 # Setup terminal, and turn on colors
 export TERM=xterm-256color
@@ -28,4 +30,3 @@ fi
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
-export GOPATH=$HOME/code/go
