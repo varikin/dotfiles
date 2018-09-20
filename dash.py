@@ -9,6 +9,7 @@ IGNORE = (
     '.gitignore',
     '.gitmodules',
     'README',
+    'omz',
 )
 
 if __name__ == "__main__":
