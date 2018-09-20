@@ -15,3 +15,17 @@ brew install vim git go gradle groovy httpie jq lolcat python3 tree watch
 echo "Setting up dotfiles"
 dash.py
 
+echo "Firefox: https://www.mozilla.org/en-US/firefox/download/thanks/"
+echo "Dropbox: https://www.dropbox.com/downloading"
+echo "1Password: https://1password.com/downloads/"
+echo "Alfred: https://www.alfredapp.com/"
+echo "Atom: https://atom.io/"
+echo "VS Code: https://code.visualstudio.com/"
+echo "Docker: https://www.docker.com/products/docker-desktop"
+echo "Chrome: https://www.google.com/chrome/"
+echo "iTerm2: https://www.iterm2.com/downloads.html"
+echo "JetBrains Toolbox: https://www.jetbrains.com/toolbox/app/"
+echo "Postman: https://www.getpostman.com/"
+echo "Slack: https://slack.com/downloads/osx"
+echo "Spotify: https://www.spotify.com/us/download/mac/"
+
