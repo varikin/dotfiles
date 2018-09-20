@@ -1,3 +1,3 @@
 My dot files with a custom linking script.
 
-Just run ./dashes.py
+Just run ./setup.sh

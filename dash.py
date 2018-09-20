@@ -3,22 +3,10 @@
 
 import os
 
-IGNORE = (
-    os.path.basename(__file__),
-    '.git',
-    '.gitignore',
-    '.gitmodules',
-    'README',
-    'omz',
-)
-
 if __name__ == "__main__":
     home = os.path.expanduser('~')
-    files = os.listdir('.')
+    files = os.listdir('files')
     for file in files:
-        if file in IGNORE:
-            continue
-	
         name = '.' + file	
         dotfile = os.path.join(home, name)
         if not os.path.exists(dotfile):

@@ -1,10 +1,9 @@
 [user]
 	name = John Shimek
-	email = john.shimek@target.com
+	email = varikin@idlenonsense.com
 
 [diff]
     color = auto
-	tool = Kaleidoscope
 
 [pager]
     color = true
@@ -23,27 +22,10 @@
     missing = "!f() { git log --oneline `git rev-parse --abbrev-ref HEAD`..$1; }; f"
 
 [core]
-	excludesfile = /Users/jshimek/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 	editor = /usr/local/bin/vim
 [push]
 	default = current
 
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
 [difftool]
 	prompt = false
-
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[hub]
-    host = git.target.com
-
-[url "git@git.target.com:"]
-	insteadOf = https://git.target.com/
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
