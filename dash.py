@@ -10,7 +10,8 @@ if __name__ == "__main__":
         name = '.' + file	
         dotfile = os.path.join(home, name)
         if not os.path.exists(dotfile):
-            file = os.path.abspath(file)            
+            src = os.path.join('files', file)
+            file = os.path.abspath(src)            
             os.symlink(file, dotfile)
             print "Added dotfile %s" % dotfile
         else:

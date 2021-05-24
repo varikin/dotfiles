@@ -1,5 +1,7 @@
 alias kk="kubectl"
+alias vim="nvim"
 alias gc="git commit"
 alias grum="git pull --rebase upstream master"
-alias grom="git pull --rebase origin master"
+alias grom="git pull --rebase origin main"
+alias gros="git pull --rebase origin master"
 alias gap="git add -p"

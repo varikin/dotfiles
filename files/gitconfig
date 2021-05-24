@@ -1,12 +1,12 @@
 [user]
-	name = John Shimek
-	email = varikin@idlenonsense.com
-
+    name = John Shimek
+    email = varikin@idlenonsense.com
 [diff]
     color = auto
 
 [pager]
     color = true
+    branch = false
 
 [status]
     color = auto
@@ -15,17 +15,25 @@
     g = log --graph --pretty=format:'%Cgreen[%h]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
     l = log --pretty=format:'%Cgreen[%H]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
 
-    # Show which branch is tracking what 
-    track = branch -vv 
+    # Show which branch is tracking what
+    track = branch -vv
 
     # Show missing commits from a branch
     missing = "!f() { git log --oneline `git rev-parse --abbrev-ref HEAD`..$1; }; f"
 
 [core]
-	excludesfile = $HOME/.gitignore_global
-	editor = /usr/local/bin/vim
+    excludesfile = /Users/jshimek/.gitignore_global
+    editor = /usr/local/bin/nvim
 [push]
-	default = current
-
+    default = current
 [difftool]
-	prompt = false
+    prompt = false
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

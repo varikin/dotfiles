@@ -13,7 +13,7 @@ echo "Installing all the things"
 brew install vim git go gradle groovy httpie jq lolcat python3 tree watch
 
 echo "Setting up dotfiles"
-dash.py
+python dash.py
 
 echo "Firefox: https://www.mozilla.org/en-US/firefox/download/thanks/"
 echo "Dropbox: https://www.dropbox.com/downloading"
