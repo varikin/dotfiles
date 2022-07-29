@@ -1,6 +1,8 @@
 export EDITOR=/usr/local/bin/nvim
 export GOPATH=$HOME/code/go
-export PATH=$GOPATH/bin:/usr/local/sbin:$PATH
+path+=$GOPATH
+path+=/usr/local/sbin
+export PATH
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export GRADLE_HOME=/usr/local/opt/gradle/libexec
