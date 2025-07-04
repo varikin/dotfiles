@@ -1,5 +1,5 @@
 alias vim='nvim'
-alias ls='exa'
+alias ls='eza'
 
 
 alias gst='git status'
@@ -8,3 +8,5 @@ alias gb='git branch'
 alias gc='git commit'
 alias gca='git commit --amend'
 alias grom='git pull --rebase origin main'
+alias gs='git switch'
+alias gsc='git switch -c'

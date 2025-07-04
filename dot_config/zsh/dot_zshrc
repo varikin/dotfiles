@@ -9,7 +9,7 @@ setopt extendedglob
 unsetopt autocd           # Do not auto cd into directories by name
 unsetopt beep             # No beeping
 
-path=("$HOME/.local/bin" $path)
+path=("$HOME/.local/bin" "$HOME/.cargo/bin" $path)
 export PATH
 
 # Up & Down to cycle through history
@@ -24,6 +24,7 @@ bindkey "^[[B" down-line-or-beginning-search	# Down
 eval "$(fzf --zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
+eval "$(mise activate zsh)"
 
 zcomet snippet $ZDOTDIR/completion.zsh
 zcomet snippet $ZDOTDIR/aliases

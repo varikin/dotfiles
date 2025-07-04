@@ -1,3 +1,27 @@
 [user]
 	email = varikin@idlenonsense.com
-	name = John Shimek
+  name = John Shimek
+
+[init]
+  defaultBranch = main
+
+[diff]
+  color = auto
+
+[status]
+  color = auto
+
+[alias]
+  g = log --graph --pretty=format:'%Cgreen[%h]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
+  l = log --pretty=format:'%Cgreen[%H]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
+
+  # Show which branch is tracking what
+  track = branch -vv
+
+[push]
+  defaut = current
+	autoSetupRemote = true
+	default = simple
+
+[pull]
+  ff = only
