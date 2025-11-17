@@ -33,6 +33,10 @@ zcomet snippet $ZDOTDIR/completion.zsh
 zcomet snippet $ZDOTDIR/bindings.zsh
 zcomet snippet $ZDOTDIR/aliases.zsh
 
+if [[ -f "$ZDOTDIR/work.zsh" ]]; then
+  zcomet snippet $ZDOTDIR/work.zsh
+fi
+
 zcomet load romkatv/powerlevel10k
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || zcomet snippet $ZDOTDIR/.p10k.zsh
 
