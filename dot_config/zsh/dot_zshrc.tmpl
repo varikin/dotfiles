@@ -9,25 +9,29 @@ setopt extendedglob
 unsetopt autocd           # Do not auto cd into directories by name
 unsetopt beep             # No beeping
 
-path=("$HOME/.local/bin" "$HOME/.cargo/bin" $path)
+_add_path() {
+  local location="$1"
+  if [[ -d "$location/bin" ]]; then
+    path+="$location/bin"
+  fi
+}
+
+_add_path "$HOME/.cargo"
+_add_path "$HOME/.local"
 export PATH
 
-# Up & Down to cycle through history
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search 	# Up
-bindkey "^[[B" down-line-or-beginning-search	# Down
-
 # Tools
+if [[ -d /opt/homebrew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 eval "$(fzf --zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 eval "$(mise activate zsh)"
 
 zcomet snippet $ZDOTDIR/completion.zsh
-zcomet snippet $ZDOTDIR/aliases
+zcomet snippet $ZDOTDIR/bindings.zsh
+zcomet snippet $ZDOTDIR/aliases.zsh
 
 zcomet load romkatv/powerlevel10k
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || zcomet snippet $ZDOTDIR/.p10k.zsh
