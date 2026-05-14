@@ -5,8 +5,20 @@
 [init]
   defaultBranch = main
 
+[core]
+  pager = delta
+
 [diff]
   color = auto
+
+[interctive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+
+[merge]
+  conflictStyle = zdiff3
 
 [status]
   color = auto
