@@ -1,4 +1,5 @@
 # Auto setup zcomet to manage plugins
+
 if [[ ! -f ${ZDOTDIR}/.zcomet/bin/zcomet.zsh ]]; then
   git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR}/.zcomet/bin
 fi
@@ -44,5 +45,3 @@ zcomet load zsh-users/zsh-syntax-highlighting
 zcomet load zsh-users/zsh-autosuggestions
 
 zcomet compinit
-
-

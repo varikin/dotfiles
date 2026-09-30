@@ -1,39 +1,39 @@
 [user]
-	email = {{ .email | quote }}
-  name = John Shimek
+email = {{ .email | quote }}
+name = John Shimek
 
 [init]
-  defaultBranch = main
+defaultBranch = main
 
 [core]
-  pager = delta
+pager = delta
 
 [diff]
-  color = auto
+color = auto
 
 [interctive]
-  diffFilter = delta --color-only
+diffFilter = delta --color-only
 
 [delta]
-  navigate = true
+navigate = true
 
 [merge]
-  conflictStyle = zdiff3
+conflictStyle = zdiff3
 
 [status]
-  color = auto
+color = auto
 
 [alias]
-  g = log --graph --pretty=format:'%Cgreen[%h]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
-  l = log --pretty=format:'%Cgreen[%H]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
+g = log --graph --pretty=format:'%Cgreen[%h]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
+l = log --pretty=format:'%Cgreen[%H]%Creset %C(white)%d%Creset %Cblue%ad by %an%Creset: %s' --date=relative
 
-  # Show which branch is tracking what
-  track = branch -vv
+# Show which branch is tracking what
+track = branch -vv
 
 [push]
-  defaut = current
-	autoSetupRemote = true
-	default = simple
+defaut = current
+autoSetupRemote = true
+default = simple
 
 [pull]
-  ff = only
+ff = only

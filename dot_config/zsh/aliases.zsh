@@ -24,9 +24,5 @@ alias gpsh="git push -u"
 alias gs="git switch"
 alias gsc="git switch -c"
 alias gsm="git switch main"
-alias gss="git switch master"
 
-alias grum="git pull --rebase upstream master"
 alias grom="git pull --rebase origin main"
-alias gros="git pull --rebase origin master"
-
